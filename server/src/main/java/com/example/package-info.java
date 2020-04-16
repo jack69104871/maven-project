@@ -1,5 +1,5 @@
 /**
-*test a package name
+*Test a package name.
 */
 package com.exmple;
 
