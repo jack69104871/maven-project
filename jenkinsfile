@@ -20,5 +20,24 @@ pipeline {
 		build job:'deploy-to-staging'
 	    }
         }
+       
+        stage('Deploy to production'){
+            steps {
+                timeout(){
+		    input message:'would you like deploy to production'
+		}
+
+		build job:'deploy-to-production'
+            }
+        
+	    post {
+	        success {
+		    echo 'Deploy code to production successfully'
+                }
+		failure {
+		    echo 'Deploy failure'
+		}
+            }
+        }
     }
 }
