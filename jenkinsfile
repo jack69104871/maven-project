@@ -6,8 +6,8 @@ pipeline {
     }
 
     parameters{
-        string(name: 'tomcat_dev', defaultValue: '13.57.227.116', description: 'Staging Server')
-        string(name: 'tomcat_prod', defaultValue: '13.57.188.56', description: 'Production Server')
+        string(name: 'tomcat_dev', defaultValue: '172.31.0.254', description: 'Staging Server')
+        string(name: 'tomcat_prod', defaultValue: '172.31.31.211', description: 'Production Server')
     }
     triggers {
          pollSCM('* * * * *')
